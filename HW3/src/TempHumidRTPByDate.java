@@ -36,11 +36,13 @@ public class TempHumidRTPByDate extends TempHumidRTP{
         while(this.intakeData.get(i) != this.day){
             i++;
             if(i >= this.intakeData.size()){
+                this.intakeData = newData;
                 return;
             }
         }
         i++;
         if(i >= this.intakeData.size()){
+            this.intakeData = newData;
             return;
         }
         while(this.intakeData.get(i) < 1000){

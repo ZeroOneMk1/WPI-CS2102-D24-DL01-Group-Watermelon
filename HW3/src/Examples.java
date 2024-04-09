@@ -73,4 +73,11 @@ public class Examples {
         thd.intakeData(testData);
         assertEquals(78.0, thd.maxTemperature(), 0.01);
     }
+
+    @Test
+    public void testMaxTemp5(){
+        TempHumid thd = new TempHumidRTPByDate(20240405.0);
+        thd.intakeData(testData);
+        assertEquals(-999.0, thd.maxTemperature(), 0.01);
+    }
 }

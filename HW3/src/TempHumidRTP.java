@@ -20,8 +20,15 @@ public class TempHumidRTP extends TempHumidTemplate{
     @Override
     public void intakeData(List<Double> data) {
         super.intakeData(data);
-        super.clean();
+        clean();
         super.parse();
         super.sort();
+    }
+    /**
+     * Removes invalid sensor data (-999 values) from the stored intake data.
+     */
+    @Override
+    public void clean() {
+        super.clean();
     }
 }
