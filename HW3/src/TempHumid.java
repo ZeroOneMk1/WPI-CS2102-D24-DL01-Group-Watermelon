@@ -31,7 +31,7 @@ public interface TempHumid {
     public abstract void intakeData(List<Double> data);
 
     /**
-     * Removed invalid sensor data (-999s) as well as data not pertaining to this objects date from the
+     * Removes invalid sensor data (-999s) as well as data not pertaining to this objects date from the
      */
     public abstract void clean();
 
