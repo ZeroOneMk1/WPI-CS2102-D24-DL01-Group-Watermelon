@@ -62,7 +62,8 @@ public abstract class TempHumidTemplate implements TempHumid{
      */
     @Override
     public void sort() {
-
+        this.parsedTemps.sort(Double::compareTo);
+        this.parsedHums.sort(Double::compareTo);
     }
 
     /**
