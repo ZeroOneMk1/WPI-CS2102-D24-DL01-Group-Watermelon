@@ -20,36 +20,37 @@ public class TempHumidRTPByDate extends TempHumidRTP{
         super();
         this.day = day;
     }
-    
+
     /**
-     * Overrides the parent class's intakeData method to filter data for the designated date.
-     * It extracts only the relevant temperature and humidity values for the target date and
-     * then calls the parent class's intakeData method for real-time processing.
+     * Overrides the parent class's clean method to filter data for the designated date.
+     * This filtering occurs during the real-time processing pipeline, ensuring that only
+     * relevant temperature and humidity values for the target date are parsed and sorted.
      *
-     * @param data A list of doubles containing temperature and humidity data in the format
-     *             specified by the TempHumid interface.
+     * It removes any invalid sensor data (-999 values) and values for other dates, leaving
+     * only the data for the specific date specified in the `this.day` field.
      */
     @Override
-    public void intakeData(List<Double> data) {
+    public void clean() {
         List<Double> newData = new ArrayList<Double>(List.of());
         int i = 0;
-        while(data.get(i) != this.day){
+        while(this.intakeData.get(i) != this.day){
             i++;
-            if(i >= data.size()){
+            if(i >= this.intakeData.size()){
                 return;
             }
         }
         i++;
-        if(i >= data.size()){
+        if(i >= this.intakeData.size()){
             return;
         }
-        while(data.get(i) < 1000){
-            newData.add(data.get(i));
+        while(this.intakeData.get(i) < 1000){
+            newData.add(this.intakeData.get(i));
             i++;
-            if(i >= data.size()){
+            if(i >= this.intakeData.size()){
                 break;
             }
         }
-        super.intakeData(newData);
+        this.intakeData = newData;
+        super.clean();
     }
 }
