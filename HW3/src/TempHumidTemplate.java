@@ -1,16 +1,24 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class TempHumidTemplate implements TempHumid{
+/**
+ * An abstract class that provides a template for processing temperature and humidity data streams.
+ * It implements the TempHumid interface, defining the core steps for data intake, cleaning, parsing,
+ * sorting, and querying maximum temperature and minimum humidity values.
+ *
+ * Subclasses should implement any date-specific logic within these methods.
+ */
+public abstract class TempHumidTemplate implements TempHumid {
+
 
     List<Double> intakeData;
     List<Double> parsedTemps;
     List<Double> parsedHums;
 
     public TempHumidTemplate(){
-        this.intakeData = new ArrayList<>(List.of());
-        this.parsedTemps = new ArrayList<>(List.of());
-        this.parsedHums = new ArrayList<>(List.of());
+        this.intakeData = new ArrayList<Double>(List.of());
+        this.parsedTemps = new ArrayList<Double>(List.of());
+        this.parsedHums = new ArrayList<Double>(List.of());
     }
     /**
      * @param data date is in yyyymmdd.0 format, temperature is in F, humidity is in % (0.0-100.0)
@@ -26,11 +34,11 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
-     *
+     * Removes invalid sensor data (-999 values) from the stored intake data.
      */
     @Override
     public void clean() {
-        List<Double> temp = new ArrayList<>(List.of());
+        List<Double> temp = new ArrayList<Double>(List.of());
         for(Double element:this.intakeData){
             if(element >=-998){
                 temp.add(element);
@@ -40,7 +48,10 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
+     * Parses the intake data into separate lists for temperatures and humidity values,
+     * preparing it for efficient querying.
      *
+     * Removes the parsed data from the intake list to avoid redundant processing.
      */
     @Override
     public void parse() {
@@ -59,7 +70,7 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
-     *
+     * Sorts the parsed temperature and humidity lists for faster query performance.
      */
     @Override
     public void sort() {
@@ -68,7 +79,9 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
-     * @return maximum temperature of stored data.
+     * Returns the highest temperature value found in the parsed data.
+     *
+     * @return The maximum temperature, or -999.0 if no valid temperature data is available.
      */
     @Override
     public double maxTemperature() {
@@ -79,7 +92,9 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
-     * @return minimum temperature of stored data.
+     * Returns the lowest humidity value found in the parsed data.
+     *
+     * @return The minimum humidity, or -999.0 if no valid humidity data is available.
      */
     @Override
     public double minHumidity() {
