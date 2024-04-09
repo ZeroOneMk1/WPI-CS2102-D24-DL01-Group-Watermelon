@@ -54,6 +54,7 @@ public abstract class TempHumidTemplate implements TempHumid{
             }else{
                 this.parsedHums.add(element);
             }
+            addingHumidity = !addingHumidity;
         }
     }
 
@@ -67,18 +68,24 @@ public abstract class TempHumidTemplate implements TempHumid{
     }
 
     /**
-     * @return
+     * @return maximum temperature of stored data.
      */
     @Override
     public double maxTemperature() {
-        return this.parsedTemps.get(0);
+        if(this.parsedTemps.isEmpty()){
+            return -999.0;
+        }
+        return this.parsedTemps.get(this.parsedTemps.size()-1);
     }
 
     /**
-     * @return
+     * @return minimum temperature of stored data.
      */
     @Override
     public double minHumidity() {
+        if(this.parsedHums.isEmpty()){
+            return -999.0;
+        }
         return this.parsedHums.get(0);
     }
 }
