@@ -71,7 +71,7 @@ public abstract class TempHumidTemplate implements TempHumid{
      */
     @Override
     public double maxTemperature() {
-        return 0;
+        return this.parsedTemps.get(0);
     }
 
     /**
@@ -79,6 +79,6 @@ public abstract class TempHumidTemplate implements TempHumid{
      */
     @Override
     public double minHumidity() {
-        return 0;
+        return this.parsedHums.get(0);
     }
 }
