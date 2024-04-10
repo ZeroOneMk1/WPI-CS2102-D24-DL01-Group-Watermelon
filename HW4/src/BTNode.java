@@ -48,8 +48,8 @@ public  class BTNode<E> implements IBinTree<E> {
             return false;
         }
 
-        BTNode no = (BTNode) o;
-        return no.data == this.data && no.left.equals(this.left) && no.right.equals(this.right);
+        BTNode<E> no = (BTNode<E>) o;
+        return no.data.equals(this.data) && no.left.equals(this.left) && no.right.equals(this.right);
 
     }
 
