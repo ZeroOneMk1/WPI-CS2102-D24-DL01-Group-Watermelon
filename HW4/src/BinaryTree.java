@@ -82,7 +82,7 @@ public class BinaryTree<E> {
         IBinTree<E> nextTree = this.strategy.addElt(elt, data);
         boolean validAdd = this.invariantValidator.validAdd(data,elt,nextTree);
         if(validAdd){
-            this.data = nextTree;
+            this.data = nextTree; //mutate!
         }
         return validAdd;
     }

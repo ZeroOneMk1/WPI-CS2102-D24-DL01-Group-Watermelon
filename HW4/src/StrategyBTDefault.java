@@ -27,7 +27,7 @@ public class StrategyBTDefault<E> extends StrategyBTAbs<E> implements IBTStrateg
     @Override
     public IBinTree<E> addElt(E elt, IBinTree<E> b) {
         if(b.isEmpty()){
-            return new BTNode<E>(elt, new BTEmpty(), new BTEmpty());
+            return new BTNode<E>(elt, new BTEmpty<>(), new BTEmpty<>());
         }
         else {
             if(this.minDepth(b.getLeft()) <= this.minDepth(b.getRight())){

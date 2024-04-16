@@ -15,7 +15,7 @@ public interface IBTValidator<E> {
     /**
      * Check if removing i from the old tree and getting the new tree is possible with the current invariants
      * @param oldTree the given tree we assume respects the invariants
-     * @param i the element to remove
+     * @param elt the element to remove
      * @param newTree the new tree which we are validating
      * @return true if we determine that the new tree respects the invariants
      */
