@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a0994d5-e544-4e7b-9168-4c4d040e3c6c" name="Changes" comment="" />
+    <list default="true" id="7a0994d5-e544-4e7b-9168-4c4d040e3c6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BTEmpty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BTNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GreenHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IBTStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IBTValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IBinTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IGHStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IGreenHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StrategyAVL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StrategyBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StrategyBTAbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StrategyBTDefault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TempHumid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TempHumidRTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TempHumidRTPByDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TempHumidTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ValidatorBTDefault.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -17,13 +53,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-221dcadf" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,6 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713376946650</updated>
+      <workItem from="1713376947717" duration="2342000" />
     </task>
     <servers />
   </component>
